@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musify</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="music-library">
+    <h1>Music Library</h1>
+    <div class="folders">
+      <button class="folder" data-folder="indian">Indian</button>
+      <button class="folder" data-folder="english">English</button>
+      <button class="folder" data-folder="pakistani">Pakistani</button>
+      <button class="folder" data-folder="punjabi">Punjabi</button>
+    </div>
+  </div>
+
+  <div class="artist-library hidden">
+    <h1>Select an Artist</h1>
+    <ul class="artist-list"></ul>
+    <button class="back-btn">Back</button>
+  </div>
+
+  <div class="song-library hidden">
+    <h1>Select a Song</h1>
+    <div class="songs"></div>
+    <button class="back-btn">Back</button>
+  </div>
+
+  <div class="music-player hidden">
+    <img id="cover" src="" alt="Album Cover">
+    <div class="song-details">
+      <h2 id="title">Song Title</h2>
+      <h3 id="artist">Artist Name</h3>
+    </div>
+    <div class="controls">
+        <img id="prev" src="back.png" alt="Previous" class="control-icon">
+        <img id="play" src="play-button.png" alt="Play" class="control-icon">
+        <img id="pause" src="pause-button.png" alt="Pause" class="control-icon">
+        <img id="next" src="right.png" alt="Next" class="control-icon">
+      </div>
+      <input type="range" id="progress" min="0" max="100" value="0">
+      <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+      <button id="back">Back to Library</button>
+      
+
+  <script src="script.js"></script>
+</body>
+</html>

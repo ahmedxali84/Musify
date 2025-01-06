@@ -1,0 +1,373 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+    overflow-y:scroll ;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  h1, h2, h3 {
+    color: #1db954;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    opacity: 0.85;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  h3:hover {
+    opacity: 1;
+  }
+  
+  /* Advanced Song Box Design */
+  .song-box {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #212121, #2a2a2a);
+    padding: 18px;
+    border-radius: 18px;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.4s ease-in-out, background 0.4s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .song-box:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #1db954, #1db954);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  .song-box div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .song-box h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .song-box p {
+    font-size: 1rem;
+    color: #b3b3b3;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Advanced Music Player Design */
+  .music-player {
+    background: #212121;
+    color: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+    transform: translateY(100px);
+    animation: slideUp 0.6s ease-out forwards;
+    transition: all 0.3s ease;
+  }
+  
+  .music-player img {
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .music-player img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Advanced Button Styles */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+    width: 100%;
+    position: relative;
+  }
+  
+  .controls img {
+    background: linear-gradient(135deg, #1db954, #1a991f);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    height: 30px;
+    width: 30px;
+  }
+  
+  .controls button:hover {
+    background: linear-gradient(135deg, #fff, #1db954);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+  }
+  
+  .controls button:active {
+    background: linear-gradient(135deg, #1db954, #1a991f);
+    transform: scale(1);
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin: 12px 0;
+    background: linear-gradient(135deg, #1db954, #1a991f);
+    height: 10px;
+    border-radius: 15px;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  input[type="range"]:hover {
+    background: linear-gradient(135deg, #1a991f, #1db954);
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background: #1db954;
+    transform: scale(1.2);
+  }
+  
+  input[type="range"]:active {
+    background: linear-gradient(135deg, #1a991f, #1db954);
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:active {
+    background: #1db954;
+    transform: scale(1.2);
+  }
+  
+  /* Back Button Styles */
+  .back-btn {
+    background: linear-gradient(135deg, #1db954, #1a991f);
+    color: black;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  .back-btn:hover {
+    background: linear-gradient(135deg, #fff, #1db954);
+    color: #1db954;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  }
+  
+  .back-btn:active {
+    transform: scale(1);
+  }
+  
+  /* Back Button (for specific element) */
+  #back {
+    background: linear-gradient(135deg, #1db954, #1a991f);
+    color: black;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  #back:hover {
+    background: linear-gradient(135deg, #fff, #1db954);
+    color: #1db954;
+    transform: scale(1.1);
+  }
+  
+  #back:active {
+    transform: scale(1);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  /* Music Library Folder Buttons */
+.folders {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .folder {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, #1db954, #1a991f);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .folder:hover {
+    background: linear-gradient(135deg, #1a991f, #1db954);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+  }
+  
+  .folder:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transform: skewX(-20deg);
+    transition: left 0.4s ease;
+  }
+  
+  .folder:hover:before {
+    left: 100%;
+  }
+  
+  .folder:active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .folder {
+      padding: 15px 30px;
+      font-size: 1rem;
+    }
+  }
+  .artist-list li {
+    padding: 20px;
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    border: none;
+    border-radius: 12px; /* More rounded corners for a card-like look */
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth to make it look like a card */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .artist-list li:hover {
+    background: #1db954; /* Spotify green on hover */
+    color: #fff; /* Ensure text stays visible */
+    transform: scale(1.08); /* Slight enlargement on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced hover shadow */
+  }
+  
+  .artist-list li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .artist-list li:hover::before {
+    transform: scale(2);
+    opacity: 1;
+  }
+  
+  .artist-list li span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+  }
+  
+  .artist-list li small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
